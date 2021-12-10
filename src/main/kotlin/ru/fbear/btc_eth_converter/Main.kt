@@ -1,5 +1,7 @@
 package ru.fbear.btc_eth_converter
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import java.io.File
 import java.io.FileNotFoundException
 import java.net.HttpURLConnection
@@ -43,4 +45,8 @@ fun main(args: Array<String>) {
     con.setRequestProperty("X-CMC_PRO_API_KEY", apiKey)
 
     con.requestMethod = "GET"
+
+    val response: Response = jacksonObjectMapper().readValue(con.inputStream)
+
+    println("Price: ${response.data.quote.eth.price}")
 }
