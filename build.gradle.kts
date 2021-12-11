@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 val main = "ru.fbear.btc_eth_converter.MainKt"
 
 plugins {
-    kotlin("jvm") version "1.5.10"
+    kotlin("jvm") version "1.6.0"
     application
 }
 
@@ -15,6 +15,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
     testImplementation(kotlin("test"))
 }
 
