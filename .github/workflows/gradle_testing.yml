@@ -26,6 +26,7 @@ jobs:
       run: |
         echo "$API_KEY" >> api_key.txt
         ls -l
+        pwd
     - name: Grant Permissions to gradlew
       run: chmod +x gradlew
     - name: Gradle Test Action
