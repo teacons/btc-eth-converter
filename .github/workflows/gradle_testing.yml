@@ -19,11 +19,13 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - shell: bash
+    - name: Create secret token for tests
+      shell: bash
       env:
           API_KEY: ${{ secrets.API_KEY }}
       run: |
         echo "$API_KEY" >> api_key.txt
+        ls -l
     - name: Grant Permissions to gradlew
       run: chmod +x gradlew
     - name: Gradle Test Action
