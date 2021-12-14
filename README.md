@@ -2,6 +2,17 @@
 
 The BTC-ETH converter is a web service. The BTC-ETH converter converts the number of bitcoin coins to ethereum coins. The API of the coinmarketcap.com service is used.
 
+## Status
+<table>
+  <tr><td>master</td><td>develop</td></tr>
+  <tr>
+    <td><a href="https://github.com/teacons/btc-eth-converter/actions?query=branch%3Amaster">
+      <img src="https://github.com/teacons/btc-eth-converter/actions/workflows/gradle_testing.yml/badge.svg?branch=master" alt="master branch testing"></a></td>
+    <td><a href="https://github.com/teacons/btc-eth-converter/actions?query=branch%3Adevelop">
+      <img src="https://github.com/teacons/btc-eth-converter/actions/workflows/gradle_testing.yml/badge.svg?branch=develop" alt="develop branch testing"></a></td>
+  </tr>
+</table>
+
 ## Requirements
 - Java 16
 
