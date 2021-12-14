@@ -25,11 +25,9 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
       run: |
         echo "$API_KEY" >> api_key.txt
-        ls -l
-        pwd
     - name: Grant Permissions to gradlew
       run: chmod +x gradlew
+    - name: Gradle Wrapper Validation
+      uses: gradle/wrapper-validation-action@v1.0.4
     - name: Gradle Test Action
-      uses: gradle/gradle-build-action@v2.0.1
-      with:
-        arguments: test
+      run: ./gradlew test
